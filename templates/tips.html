@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Cyber Safety Tips</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:
+            radial-gradient(circle at top left,#1e3a8a,#020617 45%),
+            radial-gradient(circle at bottom right,#7c3aed,#020617 40%);
+            min-height:100vh;
+            color:white;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            width:100%;
+            padding:20px 50px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:rgba(0,0,0,0.3);
+            backdrop-filter:blur(12px);
+            border-bottom:1px solid rgba(255,255,255,0.08);
+        }
+
+        .logo{
+            font-size:32px;
+            font-weight:bold;
+            color:#38bdf8;
+        }
+
+        .nav-links a{
+            text-decoration:none;
+            color:#38bdf8;
+            margin-left:30px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+            color:#a855f7;
+            text-shadow:0 0 10px #38bdf8;
+        }
+
+        /* HERO */
+
+        .hero{
+            text-align:center;
+            margin-top:70px;
+        }
+
+        .hero h1{
+            font-size:60px;
+            margin-bottom:20px;
+            color:#38bdf8;
+        }
+
+        .hero p{
+            font-size:20px;
+            color:#cbd5e1;
+        }
+
+        /* WARNING BANNER */
+
+        .warning-banner{
+            width:88%;
+            margin:auto;
+            margin-top:50px;
+            background:rgba(255,0,0,0.1);
+            border:1px solid #ef4444;
+            padding:25px;
+            border-radius:20px;
+            text-align:center;
+            color:#ff6b6b;
+            font-size:20px;
+            font-weight:bold;
+            box-shadow:0 0 20px rgba(239,68,68,0.2);
+        }
+
+        /* TIPS SECTION */
+
+        .tips-container{
+            width:88%;
+            margin:auto;
+            margin-top:50px;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+        }
+
+        .tip-card{
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.08);
+            border-radius:24px;
+            padding:30px;
+            backdrop-filter:blur(12px);
+            transition:0.3s;
+        }
+
+        .tip-card:hover{
+            transform:translateY(-8px);
+            box-shadow:0 0 25px rgba(56,189,248,0.2);
+        }
+
+        .tip-card h2{
+            color:#38bdf8;
+            margin-bottom:18px;
+            font-size:24px;
+        }
+
+        .tip-card p{
+            color:#e2e8f0;
+            line-height:1.8;
+            font-size:16px;
+        }
+
+        /* ALERT SECTION */
+
+        .alert-section{
+            width:88%;
+            margin:auto;
+            margin-top:50px;
+            background:#020617;
+            border-radius:25px;
+            padding:35px;
+            box-shadow:0 0 25px rgba(56,189,248,0.1);
+        }
+
+        .alert-section h1{
+            color:#f43f5e;
+            margin-bottom:25px;
+            font-size:38px;
+        }
+
+        .alert-list{
+            line-height:2.2;
+            font-size:18px;
+            color:#e2e8f0;
+        }
+
+        /* FOOTER */
+
+        .footer{
+            text-align:center;
+            margin:50px 0 20px;
+            color:#94a3b8;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px){
+
+            .hero h1{
+                font-size:42px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            DATA DEFENDERS
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">HOME</a>
+
+            <a href="/scanner">SCANNER</a>
+
+        </div>
+
+    </div>
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <h1>
+            🚨 CYBER SAFETY CENTER
+        </h1>
+
+        <p>
+            Stay alert. Stay secure. Protect yourself from phishing attacks.
+        </p>
+
+    </div>
+
+    <!-- WARNING -->
+
+    <div class="warning-banner">
+
+        ⚠️ Cyber criminals create fake websites every day to steal
+        passwords, banking details, and personal information.
+
+    </div>
+
+    <!-- TIPS -->
+
+    <div class="tips-container">
+
+        <div class="tip-card">
+
+            <h2>
+                🔒 Check HTTPS
+            </h2>
+
+            <p>
+                Always verify that websites use HTTPS encryption before
+                entering passwords or personal information.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <h2>
+                🚫 Avoid Suspicious Links
+            </h2>
+
+            <p>
+                Never click unknown links from emails, messages,
+                or popups claiming urgent account verification.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <h2>
+                🧠 Watch for Fake Domains
+            </h2>
+
+            <p>
+                Attackers often replace letters with numbers like
+                amaz0n.com or paypa1.com to trick users.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <h2>
+                🔑 Use Strong Passwords
+            </h2>
+
+            <p>
+                Create unique passwords and enable two-factor authentication
+                for important accounts.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <h2>
+                📧 Beware of Phishing Emails
+            </h2>
+
+            <p>
+                Do not trust emails asking for OTPs, passwords,
+                or urgent account updates.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <h2>
+                ⚡ Report Suspicious Websites
+            </h2>
+
+            <p>
+                If you discover fake websites or scams,
+                report them immediately to prevent attacks.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ALERT SECTION -->
+
+    <div class="alert-section">
+
+        <h1>
+            🚨 Common Phishing Warning Signs
+        </h1>
+
+        <div class="alert-list">
+
+            🔴 Urgent “verify your account” messages<br>
+
+            🔴 Websites asking for passwords unexpectedly<br>
+
+            🔴 Fake banking or payment pages<br>
+
+            🔴 Misspelled domain names<br>
+
+            🔴 Suspicious popups and redirects<br>
+
+            🔴 Links shortened using unknown URL shorteners
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026 DATA DEFENDERS | Cyber Awareness Initiative
+
+    </div>
+
+</body>
+
+</html>
