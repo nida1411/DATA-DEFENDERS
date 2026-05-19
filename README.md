@@ -22,16 +22,16 @@ A phishing URL detection platform designed to identify suspicious and malicious 
 ## 📸 Screenshots
 
 ### Homepage
-![Homepage](Home.png)
+![Homepage](Home.png.png)
 
 ### Scanner Page
-![Scanner](scanner.png)
+![Scanner](scanner.png.png)
 
 ### Tips Page
-![Tips](tips.png)
+![Tips](tips.png.png)
 
 ### Detection Result
-![Result](result.png)
+![Result](result.png.png)
 
 ## 👥 Team Members
 
