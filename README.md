@@ -1,4 +1,4 @@
-# CyberShield - Phishing URL Detector
+# DATA DEFENDERS - Phishing URL Detector
 
 ## Team Members
 - Nida Fathima
