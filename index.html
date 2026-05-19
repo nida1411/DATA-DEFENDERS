@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>DATA DEFENDERS</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:
+            radial-gradient(circle at top left,#1e3a8a,#020617 45%),
+            radial-gradient(circle at bottom right,#7c3aed,#020617 40%);
+            min-height:100vh;
+            color:white;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            width:100%;
+            padding:20px 50px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:rgba(0,0,0,0.3);
+            backdrop-filter:blur(10px);
+            position:sticky;
+            top:0;
+            z-index:1000;
+            border-bottom:1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo{
+            font-size:32px;
+            font-weight:bold;
+            color:#38bdf8;
+        }
+
+        .tagline{
+            font-size:13px;
+            color:#cbd5e1;
+        }
+
+        .nav-links{
+            display:flex;
+            gap:30px;
+        }
+
+        .nav-links a{
+            text-decoration:none;
+            color:#38bdf8;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+            color:#a855f7;
+            text-shadow:0 0 10px #38bdf8;
+        }
+
+        /* HERO */
+
+        .hero{
+            padding:90px 70px;
+        }
+
+        .hero h1{
+            font-size:70px;
+            line-height:1.1;
+        }
+
+        .hero span{
+            color:#38bdf8;
+        }
+
+        .hero p{
+            margin-top:20px;
+            font-size:20px;
+            color:#cbd5e1;
+            max-width:700px;
+        }
+
+        .status-box{
+            margin-top:30px;
+            display:inline-block;
+            background:rgba(0,255,150,0.1);
+            border:1px solid #22c55e;
+            padding:14px 22px;
+            border-radius:14px;
+            color:#22c55e;
+        }
+
+        /* SCANNER */
+
+        .scanner-card{
+            width:90%;
+            margin:auto;
+            margin-top:30px;
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.1);
+            backdrop-filter:blur(10px);
+            border-radius:25px;
+            padding:35px;
+            box-shadow:0 0 30px rgba(56,189,248,0.2);
+        }
+
+        .scanner-title{
+            text-align:center;
+            font-size:32px;
+            color:#38bdf8;
+            margin-bottom:30px;
+        }
+
+        .scan-form{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        input{
+            flex:1;
+            padding:18px;
+            border:none;
+            border-radius:14px;
+            background:#020617;
+            color:white;
+            font-size:16px;
+        }
+
+        input:focus{
+            outline:2px solid #38bdf8;
+        }
+
+        button{
+            padding:18px 35px;
+            border:none;
+            border-radius:14px;
+            background:linear-gradient(135deg,#38bdf8,#7c3aed);
+            color:white;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:scale(1.05);
+            box-shadow:0 0 20px #38bdf8;
+        }
+
+        /* FEATURES */
+
+        .features{
+            display:flex;
+            justify-content:space-around;
+            flex-wrap:wrap;
+            gap:20px;
+            margin-top:35px;
+        }
+
+        .feature{
+            background:rgba(255,255,255,0.05);
+            padding:15px 25px;
+            border-radius:12px;
+            color:#38bdf8;
+        }
+
+        /* ERROR */
+
+        .error-box{
+            margin-top:25px;
+            background:rgba(255,0,0,0.1);
+            border:1px solid #ef4444;
+            padding:18px;
+            border-radius:14px;
+            color:#ff6b6b;
+            font-weight:bold;
+        }
+
+        /* RESULT */
+
+        .result-box{
+            margin-top:30px;
+            background:rgba(255,255,255,0.05);
+            padding:25px;
+            border-radius:20px;
+        }
+
+        .safe{
+            color:#22c55e;
+            font-size:30px;
+        }
+
+        .suspicious{
+            color:#facc15;
+            font-size:30px;
+        }
+
+        .phishing{
+            color:#ef4444;
+            font-size:30px;
+        }
+
+        .meter{
+            margin-top:20px;
+        }
+
+        .meter-bar{
+            width:100%;
+            height:16px;
+            background:#1e293b;
+            border-radius:10px;
+            overflow:hidden;
+            margin-top:10px;
+        }
+
+        .meter-fill{
+            height:100%;
+            background:linear-gradient(90deg,#22c55e,#38bdf8,#7c3aed);
+        }
+
+        .threat-panel{
+            margin-top:25px;
+            background:#020617;
+            padding:20px;
+            border-radius:15px;
+        }
+
+        .threat-panel h3{
+            color:#f43f5e;
+            margin-bottom:15px;
+        }
+
+        .threat-panel li{
+            margin-bottom:10px;
+        }
+
+        /* CONTACT */
+
+        .contact{
+            width:90%;
+            margin:auto;
+            margin-top:60px;
+            margin-bottom:60px;
+            background:rgba(255,255,255,0.05);
+            padding:35px;
+            border-radius:25px;
+            text-align:center;
+        }
+
+        .contact h1{
+            color:#38bdf8;
+            margin-bottom:20px;
+        }
+
+        .footer{
+            text-align:center;
+            margin-bottom:20px;
+            color:#94a3b8;
+        }
+
+        @media(max-width:900px){
+
+            .hero h1{
+                font-size:45px;
+            }
+
+            .scan-form{
+                flex-direction:column;
+            }
+
+            button{
+                width:100%;
+            }
+
+            .navbar{
+                flex-direction:column;
+                gap:20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div>
+
+            <div class="logo">
+                DATA DEFENDERS
+            </div>
+
+            <div class="tagline">
+                We Defend. You Browse. Safely.
+            </div>
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#home">HOME</a>
+
+            <a href="/scanner">SCANNER</a>
+
+            <a href="/tips">TIPS</a>
+
+            <a href="#contact">CONTACT</a>
+
+        </div>
+
+    </div>
+
+    <!-- HOME -->
+
+    <section id="home">
+
+    <div class="hero">
+
+        <h1>
+            TEST YOUR URL
+            <br>
+            <span>BEFORE IT TESTS YOU</span>
+        </h1>
+
+        <p>
+            DATA DEFENDERS is an intelligent phishing URL
+            detection platform that helps users identify
+            suspicious websites before becoming victims
+            of cyber attacks.
+        </p>
+
+        <div class="status-box">
+            🟢 AI THREAT ENGINE ACTIVE
+        </div>
+
+    </div>
+
+    </section>
+
+    <!-- SCANNER -->
+
+    <section id="scanner">
+
+    <div class="scanner-card">
+
+        <div class="scanner-title">
+            SCAN ANY URL FOR THREATS
+        </div>
+
+        <form method="POST" class="scan-form">
+
+            <input
+                type="text"
+                name="url"
+                placeholder="Paste suspicious URL here..."
+                required
+            >
+
+            <button type="submit">
+                ⚡ RUN SECURITY SCAN
+            </button>
+
+        </form>
+
+        <div class="features">
+
+            <div class="feature">
+                🤖 AI Analysis
+            </div>
+
+            <div class="feature">
+                🌐 Threat Intelligence
+            </div>
+
+            <div class="feature">
+                🔒 SSL Detection
+            </div>
+
+            <div class="feature">
+                ⚡ Instant Results
+            </div>
+
+        </div>
+
+        <!-- ERROR -->
+
+        {% if error %}
+
+        <div class="error-box">
+
+            ⚠️ {{ error }}
+
+        </div>
+
+        {% endif %}
+
+        <!-- RESULTS -->
+
+        {% if result %}
+
+        <div class="result-box">
+
+            <h2 class="
+                {% if result == 'Safe' %}
+                    safe
+                {% elif result == 'Suspicious' %}
+                    suspicious
+                {% else %}
+                    phishing
+                {% endif %}
+            ">
+
+            {% if result == 'Safe' %}
+                ✅ LOW RISK
+            {% elif result == 'Suspicious' %}
+                ⚠️ MEDIUM RISK
+            {% else %}
+                🚨 HIGH RISK
+            {% endif %}
+
+            </h2>
+
+            <div class="meter">
+
+                <p>
+                    Trust Score:
+                    <b>{{ trust_score }}/100</b>
+                </p>
+
+                <div class="meter-bar">
+
+                    <div
+                        class="meter-fill"
+                        style="width: {{ trust_score }}%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+            <div class="threat-panel">
+
+                <h3>
+                    Threat Indicators
+                </h3>
+
+                <ul>
+
+                    {% for reason in reasons %}
+
+                    <li>
+                        🔍 {{ reason }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+    <div class="contact">
+
+        <h1>
+            CONTACT DATA DEFENDERS
+        </h1>
+
+        <p>
+            Need help or want to report suspicious websites?
+        </p>
+
+        <br>
+
+        <p>
+            📧 datadefenders@gmail.com
+        </p>
+
+    </div>
+
+    </section>
+
+    <div class="footer">
+        © 2026 DATA DEFENDERS | Cyber Security Project
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>DATA DEFENDERS SCANNER</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:
+    radial-gradient(circle at top left,#1e3a8a,#020617 45%),
+    radial-gradient(circle at bottom right,#7c3aed,#020617 40%);
+    min-height:100vh;
+    color:white;
+    margin:0;
+}
+
+.navbar{
+    padding:20px 50px;
+    background:rgba(0,0,0,0.3);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#38bdf8;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+.container{
+    width:85%;
+    margin:auto;
+    margin-top:60px;
+}
+
+.title{
+    text-align:center;
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:40px;
+}
+
+.scanner-box{
+    background:rgba(255,255,255,0.05);
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(56,189,248,0.2);
+}
+
+form{
+    display:flex;
+    gap:20px;
+}
+
+input{
+    flex:1;
+    padding:18px;
+    border:none;
+    border-radius:14px;
+    background:#020617;
+    color:white;
+    font-size:16px;
+}
+
+button{
+    padding:18px 35px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#38bdf8,#7c3aed);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.error-box{
+    margin-top:25px;
+    background:rgba(255,0,0,0.1);
+    border:1px solid #ef4444;
+    padding:18px;
+    border-radius:14px;
+    color:#ff6b6b;
+}
+
+.result-box{
+    margin-top:30px;
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:20px;
+}
+
+.safe{
+    color:#22c55e;
+}
+
+.suspicious{
+    color:#facc15;
+}
+
+.phishing{
+    color:#ef4444;
+}
+
+.meter-bar{
+    width:100%;
+    height:16px;
+    background:#1e293b;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.meter-fill{
+    height:100%;
+    background:linear-gradient(90deg,#22c55e,#38bdf8,#7c3aed);
+}
+
+.threat-panel{
+    margin-top:25px;
+    background:#020617;
+    padding:20px;
+    border-radius:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="logo">
+DATA DEFENDERS
+</div>
+
+<div class="nav-links">
+
+<a href="/">HOME</a>
+
+<a href="/tips">TIPS</a>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="title">
+⚡ URL SECURITY SCANNER
+</div>
+
+<div class="subtitle">
+Analyze suspicious links before clicking them
+</div>
+
+<div class="scanner-box">
+
+<form method="POST">
+
+<input
+type="text"
+name="url"
+placeholder="Paste suspicious URL here..."
+required
+>
+
+<button type="submit">
+RUN SCAN
+</button>
+
+</form>
+
+{% if error %}
+
+<div class="error-box">
+
+⚠️ {{ error }}
+
+</div>
+
+{% endif %}
+
+{% if result %}
+
+<div class="result-box">
+
+<h1 class="
+{% if result == 'Safe' %}
+safe
+{% elif result == 'Suspicious' %}
+suspicious
+{% else %}
+phishing
+{% endif %}
+">
+
+{{ result }}
+
+</h1>
+
+<p>
+Trust Score:
+<b>{{ trust_score }}/100</b>
+</p>
+
+<div class="meter-bar">
+
+<div
+class="meter-fill"
+style="width: {{ trust_score }}%;"
+></div>
+
+</div>
+
+<div class="threat-panel">
+
+<h3>
+Threat Indicators
+</h3>
+
+<ul>
+
+{% for reason in reasons %}
+
+<li>
+🔍 {{ reason }}
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</div>
+
+</body>
+
+</html>
