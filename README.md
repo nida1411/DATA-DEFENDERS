@@ -1,14 +1,44 @@
-# DATA DEFENDERS - Phishing URL Detector
+# DATA DEFENDERS 🛡️
 
-## Team Members
-- Nida Fathima
-- Soha Mohammad Maqsood
-- Ramsha Yasmeen
+A phishing URL detection platform designed to identify suspicious and malicious websites using cybersecurity threat analysis techniques.
 
-## Project Description
-A beginner-friendly phishing URL detection system that identifies suspicious URLs using rule-based analysis and provides users with a trust score and explanation.
+## 🚀 Features
 
-## Technologies Used
+- Phishing URL Detection
+- HTTPS Verification
+- Suspicious Keyword Analysis
+- Spoofed Domain Detection
+- Trust Score System
+- Interactive Cybersecurity UI
+- Error Handling & Validation
+
+## 🛠️ Tech Stack
+
 - Python
 - Flask
-- HTML/CSS
+- HTML
+- CSS
+
+## 📸 Screenshots
+
+### Homepage
+![Homepage](Home.png)
+
+### Scanner Page
+![Scanner](scanner.png)
+
+### Tips Page
+![Tips](tips.png)
+
+### Detection Result
+![Result](result.png)
+
+## 👥 Team Members
+
+- Nida Fathima
+- Soha Mohammad maqsood
+- Ramsha Yasmeen
+
+## ⚡ Purpose
+
+The goal of DATA DEFENDERS is to spread cyber awareness and help users avoid phishing attacks and malicious links.
