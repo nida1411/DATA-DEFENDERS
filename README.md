@@ -32,7 +32,7 @@ The goal of DATA DEFENDERS is to spread cyber awareness and help users avoid phi
 - Regular Expressions (Regex)
 
 ## System Architecture
-![Architechture](architechture.png)
+![Architechture](screenshots/architechture.png)
 
 ## Workflow
 
@@ -64,18 +64,18 @@ python app.py
 ## 📸 Screenshots
 
 ### Homepage
-![Homepage](Home.png)
+![Homepage](screenshots/Home.png)
 
 ### Scanner Page
-![Scanner](scanner.png)
+![Scanner](screenshots/scanner.png)
 
 ### Tips Page
-![Tips](tips.png)
+![Tips](screenshots/tips.png)
 
 ### Detection Result
 
-![Result](result1.png)
-![Result](result2.png)
+![Result](screenshots/result1.png)
+![Result](screenshots/result2.png)
 
 
 ## UN Sustainable Development Goals
