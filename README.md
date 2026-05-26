@@ -73,8 +73,10 @@ python app.py
 ![Tips](tips.png)
 
 ### Detection Result
+
 ![Result](result1.png)
 ![Result](result2.png)
+
 
 ## UN Sustainable Development Goals
 
